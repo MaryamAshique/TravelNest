@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Explore</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/explore.js" defer></script>
+
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="TravelNest" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+    <meta name="theme-color" content="#485342">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.png" id="logo1" alt="TravelNest">
+            <h3>TravelNest</h3>
+        </a>
+
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="explore.html" class="active">Explore</a>
+            <a href="budget.html">Budget Planner</a>
+            <a href="trip.html">Trip Generator</a>
+            <a href="mood.html">Mood</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+
+
+    <main class="exploremain">
+
+        <!-- HERO -->
+        <section class="explore-hero">
+            <h1>Discover Your Next Destination</h1>
+            <p>Explore curated destinations from around the world.</p>
+        </section>
+
+        <!-- FILTERS -->
+        <section class="filters-section">
+            <h2 class="visually-hidden">Filters</h2>
+            <div class="filters">
+                <select id="continentFilter">
+                    <option value="all">All Continents</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Africa">Africa</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                <select id="placeFilter">
+                    <option value="all">All Destinations</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- GRID -->
+        <section class="destinations-section">
+            <h2 class="visually-hidden">Destinations</h2>
+            <div class="global-grid" id="grid"></div>
+            <div class="pagination" id="pagination"></div>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <span class="close-btn" id="close">&times;</span>
+
+            <div class="image-slider">
+                <button class="nav left" id="prev">&#10094;</button>
+                <img id="modalImg" src="images/logo.png" alt="Destination image">
+                <button class="nav right" id="next">&#10095;</button>
+            </div>
+
+            <div class="modal-info">
+                <h1 id="title">Loading</h1>
+                <h2 id="country">Loading</h2>
+
+                <p id="desc"></p>
+                
+
+                <h2>Attractions</h2>
+                <ul id="attractions"></ul>
+
+                <h2>Travel Cost</h2>
+                <table>
+                    <tr>
+                        <th>Expense</th>
+                        <th>Budget</th>
+                        <th>Moderate</th>
+                        <th>Luxury</th>
+                    </tr>
+
+                    <tr>
+                        <td>Hotel</td>
+                        <td id="bHotel"></td>
+                        <td id="mHotel"></td>
+                        <td id="lHotel"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Food</td>
+                        <td id="bFood"></td>
+                        <td id="mFood"></td>
+                        <td id="lFood"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Transport</td>
+                        <td id="bTransport"></td>
+                        <td id="mTransport"></td>
+                        <td id="lTransport"></td>
+                    </tr>
+
+                    <tr class="total-row">
+                        <td>Total</td>
+                        <td id="bTotal"></td>
+                        <td id="mTotal"></td>
+                        <td id="lTotal"></td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="links">
+                <div class="Qlinks">
+                    <h2>Quick Links</h2>
+                    <a href="index.html">Home</a>
+                    <a href="explore.htm">Explore</a>
+                    <a href="budget.html">Budget Planner</a>
+                    <a href="trip.html">Trip Generator</a>
+                    <a href="mood.html">Mood</a>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <div class="Contact">
+                    <h2>Contact Info</h2>
+                    <p>Email:
+                        <a href="mailto:maryamashique24@gmail.com">
+                            maryamashique24@gmail.com
+                        </a>
+                    </p>
+                    <p>Phone: +94 767766152</p>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>Stay up to date with TravelNest</p>
+
+                <form id="newsletterForm">
+                    
+                    <label for="emailInput" class="sr-only">
+                        Email address for newsletter
+                    </label>
+
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p class="rights">© 2026 TravelNest. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

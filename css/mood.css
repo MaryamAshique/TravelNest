@@ -1,0 +1,278 @@
+.mood-page{
+    min-height:100vh;
+    padding:60px 40px;
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-family:"Playfair Display", serif;
+    font-weight:500;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#ffffffd1;
+    line-height:1.8;
+}
+
+/* SOUND SECTION */
+
+.sound-section{
+    margin-bottom:70px;
+    text-align:center;
+}
+
+.sound-section h2{
+    font-size:2.2rem;
+    font-family:"Playfair Display", serif;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.sound-controls{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.sound-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+    );
+
+    border:1px solid rgba(255,255,255,0.08);
+    padding:16px 22px;
+    border-radius:50px;
+    backdrop-filter:blur(12px);
+    font-family:"Quicksand", sans-serif;
+}
+
+.switch{
+    position:relative;
+    width:58px;
+    height:30px;
+}
+
+.switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#2d2d2d;
+    border-radius:50px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.slider::before{
+
+    content:"";
+    position:absolute;
+    width:22px;
+    height:22px;
+    left:4px;
+    top:4px;
+    border-radius:50%;
+    background:white;
+    transition:0.3s;
+}
+
+.switch input:checked + .slider{
+    background:white;
+}
+
+.switch input:checked + .slider::before{
+    transform:translateX(28px);
+    background:black;
+}
+
+/* CARDS SECTION */
+
+.cards-section{
+    margin-bottom:50px;
+    margin-top: 150px;
+    
+}
+
+.section-title{
+    margin-bottom:30px;
+}
+
+.section-title h2{
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    font-weight: 500;
+    margin-left: 45px;
+}
+
+.visit-btn{
+
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    font-size:1.2rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.visit-btn:hover{
+    background:white;
+    color:black;
+}
+
+.delete-btn{
+
+    position:absolute;
+    top:15px;
+    left:15px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:none;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+    z-index:20;
+}
+
+.delete-btn:hover{
+    background:white;
+    color:black;
+}
+
+/* EMPTY */
+
+.empty{
+    color:#ffffffb0;
+    font-size:1rem;
+    font-family:"Quicksand", sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:992px){
+
+    .mood-page{
+        padding:40px 20px;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .sound-controls{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .sound-item{
+        width:100%;
+        max-width:320px;
+        justify-content:space-between;
+    }
+
+    .section-title h2{
+        margin-left:0;
+        text-align:center;
+    }
+}
+
+@media(max-width:768px){
+
+    .mood-page{
+        padding:30px 15px;
+    }
+
+    .hero{
+        margin-bottom:40px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+        margin-bottom:12px;
+    }
+
+    .hero p{
+        font-size:1rem;
+        line-height:1.6;
+    }
+
+    .sound-section h2{
+        font-size:1.8rem;
+    }
+
+    .sound-item{
+        padding:14px 18px;
+        font-size:0.95rem;
+    }
+
+    .switch{
+        width:52px;
+        height:28px;
+    }
+
+    .slider::before{
+        width:20px;
+        height:20px;
+    }
+
+    .cards-section{
+        margin-top:80px;
+        margin-bottom:50px;
+    }
+
+    .section-title h2{
+        font-size:1.2rem;
+        letter-spacing:3px;
+    }
+
+    .visit-btn,
+    .delete-btn{
+        width:40px;
+        height:40px;
+        font-size:1rem;
+    }
+
+    .empty{
+        font-size:0.9rem;
+        text-align:center;
+    }
+}

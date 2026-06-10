@@ -1,0 +1,230 @@
+.trip-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    color: white;
+    gap: 60px;
+}
+
+/* GENERATOR SECTION */
+
+.trip-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.trip-container h1 {
+    font-size: 4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.trip-container p {
+    font-size: 1.1rem;
+    color: #ffffffd1;
+    line-height: 1.8;
+}
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.filters select {
+    padding: 14px 22px;
+    min-width: 230px;
+    border-radius: 40px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+    );
+
+    color: white;
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+
+    backdrop-filter: blur(12px);
+    outline: none;
+    cursor: pointer;
+}
+
+.filters select option {
+    background-color: #485342;
+    color: white;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* CONTROLS */
+
+.controls {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.controls button {
+    flex: 1;
+    min-width: 140px;
+
+    padding: 14px;
+    border: none;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    transform: translateY(-3px);
+    background: white;
+    color: black;
+}
+
+/* WISHLIST SECTION */
+
+#wishlistSection {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#saveListTitle {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.wishlist-remove {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wishlist-remove:hover {
+    background: white;
+    color: black;
+}
+
+.empty{
+    text-align:center;
+    width:100%;
+    color:#ffffffb0;
+}
+
+
+/* ================= MOBILE ================= */
+
+
+@media (max-width: 992px){
+
+    .trip-container h1{
+        font-size: 2.8rem;
+    }
+
+    .filters{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters select{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .controls{
+        flex-direction: column;
+    }
+
+    .controls button{
+        width: 100%;
+    }
+
+    #wishlistGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (max-width: 768px){
+
+    .trip-page {
+        padding: 40px 15px;
+        gap: 40px;
+    }
+
+    .trip-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .trip-container p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .filters select {
+        max-width: 100%;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+
+    .controls button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    #saveListTitle {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    #wishlistGrid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+

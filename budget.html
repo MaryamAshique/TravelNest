@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelNest | Budget Planner</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/budget.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/budget.js" defer></script>
+
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="TravelNest" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+
+    <meta name="theme-color" content="#485342">
+
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="images/logo.png" id="logo1" alt="TravelNest">
+            <h3>TravelNest</h3>
+        </a>
+
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="budget.html" class="active">Budget Planner</a>
+            <a href="trip.html">Trip Generator</a>
+            <a href="mood.html">Mood</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+
+    <main class="budgetmain">
+        <section class="budget-planner">
+
+            <div class="planner-glass">
+
+                <h1>Know Before You Go</h1>
+
+                <p>
+                    Estimate expenses and travel smarter with every journey.
+                </p>
+
+                <form id="budgetForm">
+
+                    <div class="input-group">
+
+                    <label for="destination">Destination</label>
+                    <select id="destination">
+                            <option value="">Select Destination</option>
+
+                            <option value="Bali">Bali</option>
+                            <option value="Kyoto">Kyoto</option>
+                            <option value="Maldives">Maldives</option>
+
+                            <option value="Paris">Paris</option>
+                            <option value="Santorini">Santorini</option>
+                            <option value="Swiss Alps">Swiss Alps</option>
+
+                            <option value="Cape Town">Cape Town</option>
+                            <option value="Marrakech">Marrakech</option>
+                            <option value="Cairo">Cairo</option>
+
+                            <option value="New York">New York</option>
+                            <option value="Banff">Banff</option>
+                            <option value="Tulum">Tulum</option>
+
+                            <option value="Rio">Rio</option>
+                            <option value="Machu Picchu">Machu Picchu</option>
+                            <option value="Cartagena">Cartagena</option>
+
+                            <option value="Sydney">Sydney</option>
+                            <option value="Queenstown">Queenstown</option>
+                            <option value="Bora Bora">Bora Bora</option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="days">Number of Days</label>
+
+                        <input type="number"
+                        id="days"
+                        placeholder="Enter days"
+                        min="1">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="dailyBudget">Daily Budget ($)</label>
+
+                        <input type="number"
+                        id="dailyBudget"
+                        placeholder="Enter budget"
+                        min="1">
+
+                    </div>
+
+                    <button type="submit" class="calculate-btn">
+                        Calculate Budget
+                    </button>
+
+                </form>
+
+                <!-- RESULTS -->
+                <div class="results" id="results">
+
+                    <h2>Total Estimated Cost</h2>
+
+                    <div class="total-cost" id="totalCost">
+                        $0
+                    </div>
+
+                    <div class="status" id="status">
+                        Moderate
+                    </div>
+
+                    <!-- PROGRESS -->
+                    <div class="progress-container">
+
+                        <div class="progress-bar" id="progressBar">
+
+                        </div>
+
+                    </div>
+
+                    <button class="save-btn" id="saveBtn">
+                        Save Trip
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SAVED TRIPS -->
+        <section class="saved-trips-section">
+
+            <h2>Saved Trips</h2>
+
+            <div id="savedTripsGrid" class="global-grid"></div>
+
+        </section>       
+
+    </main>
+
+
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="links">
+                <div class="Qlinks">
+                    <h2>Quick Links</h2>
+                    <a href="index.html">Home</a>
+                    <a href="explore.html">Explore</a>
+                    <a href="budget.html">Budget Planner</a>
+                    <a href="trip.html">Trip Generator</a>
+                    <a href="mood.html">Mood</a>
+                    <a href="support.html">Support</a>
+                </div>
+
+                <div class="Contact">
+                    <h2>Contact Info</h2>
+                    <p>Email:
+                        <a href="mailto:maryamashique24@gmail.com">
+                            maryamashique24@gmail.com
+                        </a>
+                    </p>
+                    <p>Phone: +94 767766152</p>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>Stay up to date with TravelNest</p>
+
+                <form id="newsletterForm">
+                    
+                    <label for="emailInput" class="sr-only">
+                        Email address for newsletter
+                    </label>
+
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="footer-bottom">
+            <p class="rights">© 2026 TravelNest. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
